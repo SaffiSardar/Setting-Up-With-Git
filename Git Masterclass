@@ -1,0 +1,40 @@
+
+git config --global init.defaultBranch main //set new convension for setting new repos
+git log                                     //history
+git checkout [commit hash from history]     //reverse
+git checkout main                           //to go back to final state when u care about checkout changes
+git checkout -f main                        //to go back to final state when u dont care about checkout changes
+git branch branch-name                      //create a new branch 
+git checkout branch-name                    //traverse to new branch
+git checkout -b branch-name                 //create and traverse to new branch
+git branch new-branch-name source-branch    //specific branching/inheriting
+git push -u origin feature-branch           //connect local branch to remote repo
+pull request  [gui]                         //when u want to merge two branches and want team's review
+delete branch [gui]                         //when u r done with a branch and no pull request needed
+git pull                                    //update your feature-branch if anyone else made changes OR after PR/MERGE
+
+
+Typical Git Workflow:
+1. clone repo
+2. create branch
+3. make changes (commit)                 
+4. make branch converge remote  (push)
+5. PR
+6. Merge
+7. Pull in main
+
+
+Merge Conflict //?Usually when 2 dev want to merge same file same text they changes, need to be fixed by ide [gui], which to keep
+pull request merge later
+
+
+git reset --soft <commit-hash> //soft reset, this lets code stay in local repo uncommits it, u can commit, say rename commit or combine
+git reset <commit-hash>        //mixed reset, this lets code stay in local repo but unstages and uncommits it, u can stage by add .
+git reset --hard <commit-hash> //hard reset, code disappears, nothing stages/commited
+git revert <commit-hash>       //similar to rest but lets u keep ur after logs and make revert a commit itself, when u show poeple i fiexed something
+git stash                      //save ur work unstaged/uncommited and work on something else
+git stash list                 //view stashes
+git stash apply <stash-hash>   //go back to your work
+
+
+git GUI [NO FUN]                                

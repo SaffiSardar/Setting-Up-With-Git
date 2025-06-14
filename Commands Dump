@@ -1,0 +1,67 @@
+-> SETTING UP PYTHON ENVIRONMENT:
+
+in terminal;
+mkdir Test
+cd Test
+python3 -m venv venv
+{ Every time recurr
+source venv/bin/activate
+{ Once per project
+pip install -r requirements.txt
+}
+code .
+}
+
+in vs code;
+{ Once Per project
+Press Ctrl + Shift + P
+Type Python: Select Interpreter
+Pick: ./venv/bin/python
+}
+
+to install packages;
+pip install <package-name>
+
+to save packages in requiremnts.txt:
+pip freeze > requirements.txt
+
+
+github setup;
+{ first time on venv
+git config --global user.name "SaffiSardar"
+git config --global user.email "saffisardar2012@gmail.com"
+git config --global init.defaultBranch main
+}
+{ Once per project
+git init
+touch .gitignore
+
+in git ignore;
+venv/
+__pycache__/
+*.pyc
+.env
+
+on github;
+New Repository → Name it same as folder → Don’t init with README.
+
+in terminal;
+git remote add origin https://github.com/your-username/your-repo.git
+}
+{after a change;
+git add .
+git commit -m "init"
+{first time
+git push --set-upstream origin main
+}
+git push
+}
+
+{ when cloning;
+git clone https://github.com/username/repo-name.git
+cd repo-name
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+code .
+}
